@@ -1,0 +1,16 @@
+# IPv4 examples
+1.178.7.0/24          # is a subset of 1.178.4.0/22 -> will be removed
+1.178.8.0/24          # is a subset of 1.178.4.0/22 -> will be removed
+192.168.1.0/24        # is a subset of 192.168.0.0/16 -> will be removed
+10.0.0.0/8            # not a subset of any main network -> will stay
+1.0.0.0/24            # exact duplicate from main -> will be removed
+1.0.0.0/25            # is a subset of 1.0.0.0/24 -> will be removed
+
+; IPv6 examples
+2001:db8:1::/48       # is a subset of 2001:db8::/32 -> will be removed
+2001:db9::/32         # not a subset -> will stay
+2600:1f00:1000::/48   # is a subset of 2600:1f00::/40 -> will be removed
+2600:1f01::/40        # not a subset -> will stay
+
+# Non-CIDR line (not an IP network) – will be kept as is
+Just plain text, not an IP network

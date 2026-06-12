@@ -1,0 +1,17 @@
+# Target file to check
+# IPv4 examples
+1.178.7.0/24          # will be removed (subnet of 1.178.4.0/22)
+1.178.8.0/24          # will be removed (subnet of 1.178.4.0/22)
+192.168.1.0/24        # will be removed (subnet of 192.168.0.0/16)
+10.0.0.0/8            # will stay (not in main)
+1.0.0.0/24            # will be removed (exact duplicate)
+8.8.8.0/24            # will stay
+
+; IPv6 examples
+2001:db8:1::/48       # will be removed (subnet of 2001:db8::/32)
+2001:db9::/32         # will stay
+2600:1f00:1000::/48   # will be removed (subnet of 2600:1f00::/40)
+2600:1f01::/40        # will stay
+
+# Non-CIDR lines are always kept
+This is just plain text
